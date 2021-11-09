@@ -1,6 +1,9 @@
 import { Grid, Typography } from '@mui/material'
 import React, { Component } from 'react'
 
+const AGGREGATOR_HOSTNAME = window.env.AGGREGATOR_HOSTNAME;
+const AGGREGATOR_PORT = window.env.AGGREGATOR_PORT;
+
 const displayLastEmptied = (tDate) => {
   const d = new Date(tDate)
   return d.toLocaleString()
@@ -21,7 +24,7 @@ export default class AggregatorInfo extends Component {
   }
 
   componentDidMount() {
-    const url = `http://localhost:7777/condenser/${this.props.condenserId}` 
+    const url = `http://${AGGREGATOR_HOSTNAME}:${AGGREGATOR_PORT}/condenser/${this.props.condenserId}` 
     fetch(url)
       .then(res => res.json())
       .then(

@@ -1,8 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
+const API_HOSTNAME = window.env.API_HOSTNAME;
+const API_PORT = window.env.API_PORT;
+
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://127.0.0.1:8080/api/v1' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://'+API_HOSTNAME+':'+API_PORT+'/api/v1' }),
   tagTypes: ['Condenser'],
   endpoints: (builder) => ({
     getCondensers: builder.query({
