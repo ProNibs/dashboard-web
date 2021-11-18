@@ -1,0 +1,11 @@
+#@data/values
+---
+env: 
+- name: AGGREGATOR_HOSTNAME
+  value: aggregator.127.0.0.1.nip.io
+- name: AGGREGATOR_PORT
+  value: "8443"
+- name: API_HOSTNAME
+  value: dashboard.api.127.0.0.1.nip.io
+- name: API_PORT
+  value: "8443"
