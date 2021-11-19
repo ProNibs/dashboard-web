@@ -11,6 +11,10 @@ spec:
       url: https://github.com/pronibs/capstone.git
       ref: origin/develop
       subPath: dashboard-web/k8s
+  - git:
+      url: https://github.com/pronibs/capstone.git
+      ref: origin/develop
+      subPath: global-deployments/k8s
 
   template:
   - ytt: {}
