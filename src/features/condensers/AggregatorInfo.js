@@ -24,7 +24,7 @@ export default class AggregatorInfo extends Component {
   }
 
   componentDidMount() {
-    const url = `http://${AGGREGATOR_HOSTNAME}:${AGGREGATOR_PORT}/condenser/${this.props.condenserId}` 
+    const url = `https://${AGGREGATOR_HOSTNAME}:${AGGREGATOR_PORT}/condenser/${this.props.condenserId}` 
     fetch(url)
       .then(res => res.json())
       .then(

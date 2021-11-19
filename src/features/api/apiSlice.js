@@ -5,7 +5,7 @@ const API_PORT = window.env.API_PORT;
 
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://'+API_HOSTNAME+':'+API_PORT+'/api/v1' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://'+API_HOSTNAME+':'+API_PORT+'/api/v1' }),
   tagTypes: ['Condenser'],
   endpoints: (builder) => ({
     getCondensers: builder.query({
